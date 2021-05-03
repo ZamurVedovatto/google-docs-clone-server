@@ -1,7 +1,8 @@
 const mongoose = require("mongoose")
 const Document = require("./Document")
+const {	DB, PORT, IN_PROD} = require('./config')
 
-mongoose.connect("mongodb+srv://admin:2StIeuKeajNIfOHy@cluster0.kce9c.mongodb.net/googledocs?retryWrites=true&w=majority", {
+mongoose.connect(DB, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false,
